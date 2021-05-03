@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjectOneandTwo
+namespace SimpleWage
 {
     public partial class Form1 : Form
     {
@@ -17,9 +17,16 @@ namespace ProjectOneandTwo
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void calculate_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Your calculation is complete.");
+            float calc = float.Parse(wage.Text) * float.Parse(hours.Text);
+            label4.Text = ""+calc;
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
